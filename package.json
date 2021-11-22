@@ -1,0 +1,30 @@
+{
+  "name": "caloreduce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aldzikridp/Caloreduce.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aldzikridp/Caloreduce/issues"
+  },
+  "homepage": "https://github.com/aldzikridp/Caloreduce#readme",
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.3",
+    "nodemon": "^2.0.15",
+    "typescript": "^4.5.2",
+    "typescript-language-server": "^0.8.0"
+  },
+  "dependencies": {
+    "@hapi/hapi": "^20.2.1"
+  }
+}
