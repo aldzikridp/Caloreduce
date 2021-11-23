@@ -557,7 +557,7 @@ const food = {
       kalori: 151,
     },
     {
-      nama: 'tumis kc.panjang + jagung',
+      nama: 'tumis kacang panjang dan jagung',
       kalori: 118,
     },
   ],
