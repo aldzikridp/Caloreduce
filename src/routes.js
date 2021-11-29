@@ -1,4 +1,5 @@
 const calculateCal = require('./handlers/calculateCal');
+const recommendFood = require('./handlers/recommendFood');
 
 const routes = [
   {
@@ -20,6 +21,15 @@ const routes = [
       });
 
       return BMR;
+    },
+  },
+  {
+    method: 'GET',
+    path: '/foods',
+    handler: (request) => {
+      const { calorie } = request.query;
+      const foods = recommendFood(calorie);
+      return foods;
     },
   },
 ];
