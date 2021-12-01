@@ -1,5 +1,6 @@
 const Hapi = require('@hapi/hapi');
 const Vision = require('@hapi/vision');
+const Inert = require('@hapi/inert');
 const handlebars = require('handlebars');
 const routes = require('./routes');
 
@@ -9,7 +10,7 @@ const init = async () => {
     host: 'localhost',
   });
 
-  await server.register(Vision);
+  await server.register([Vision, Inert]);
 
   server.views({
     engines: {

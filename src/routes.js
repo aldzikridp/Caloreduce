@@ -1,3 +1,4 @@
+const path = require('path');
 const calculateCal = require('./handlers/calculateCal');
 const recommendFood = require('./handlers/recommendFood');
 
@@ -42,6 +43,14 @@ const routes = [
       const { calorie } = request.query;
       const foods = recommendFood(calorie);
       return foods;
+    },
+  },
+  {
+    method: 'GET',
+    path: '/public/css/style.css',
+    handler: (request, h) => {
+      const response = h.file('public/css/style.css');
+      return response;
     },
   },
 ];
