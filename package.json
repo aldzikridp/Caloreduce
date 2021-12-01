@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./src/server.js"
+    "start": "nodemon ./src/server.js",
+    "build-css": "postcss ./src/css/style.css -o ./public/css/style.css"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,11 @@
   },
   "dependencies": {
     "@hapi/hapi": "^20.2.1",
+    "@hapi/inert": "^6.0.4",
     "@hapi/vision": "^6.1.0",
-    "handlebars": "^4.7.7"
+    "autoprefixer": "^10.4.0",
+    "handlebars": "^4.7.7",
+    "postcss-cli": "^9.0.2",
+    "tailwindcss": "^2.2.19"
   }
 }
