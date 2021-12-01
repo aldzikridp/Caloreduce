@@ -1,4 +1,6 @@
 const Hapi = require('@hapi/hapi');
+const Vision = require('@hapi/vision');
+const handlebars = require('handlebars');
 const routes = require('./routes');
 
 const init = async () => {
@@ -7,11 +9,11 @@ const init = async () => {
     host: 'localhost',
   });
 
-  await server.register(require('@hapi/vision')); // eslint-disable-line
+  await server.register(Vision);
 
   server.views({
     engines: {
-      html: require('handlebars'), // eslint-disable-line
+      html: handlebars,
     },
     relativeTo: __dirname,
     path: 'views',
