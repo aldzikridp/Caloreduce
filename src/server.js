@@ -7,6 +7,16 @@ const init = async () => {
     host: 'localhost',
   });
 
+  await server.register(require('@hapi/vision')); // eslint-disable-line
+
+  server.views({
+    engines: {
+      html: require('handlebars'), // eslint-disable-line
+    },
+    relativeTo: __dirname,
+    path: 'views',
+  });
+
   server.route(routes);
 
   await server.start();

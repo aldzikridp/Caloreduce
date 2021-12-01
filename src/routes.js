@@ -5,6 +5,18 @@ const routes = [
   {
     method: 'GET',
     path: '/',
+    handler: {
+      view: {
+        template: 'index',
+        context: {
+          message: 'view is running',
+        },
+      },
+    },
+  },
+  {
+    method: 'GET',
+    path: '/calorie',
     handler: (request) => {
       const {
         height,
