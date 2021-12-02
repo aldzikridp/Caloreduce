@@ -1,4 +1,3 @@
-const path = require('path');
 const calculateCal = require('./handlers/calculateCal');
 const recommendFood = require('./handlers/recommendFood');
 
