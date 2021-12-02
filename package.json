@@ -30,6 +30,7 @@
     "@hapi/inert": "^6.0.4",
     "@hapi/vision": "^6.1.0",
     "autoprefixer": "^10.4.0",
+    "cssnano": "^5.0.12",
     "handlebars": "^4.7.7",
     "postcss-cli": "^9.0.2",
     "tailwindcss": "^2.2.19"
