@@ -41,12 +41,7 @@ const recommendFood = (calorie) => {
   const makananSayur = getFoodList(caloriePerKind, foods.sayur);
   const makananBuah = getFoodList(caloriePerKind, foods.buah);
 
-  const foodResult = {
-    makananPokok,
-    makananLauk,
-    makananSayur,
-    makananBuah,
-  };
+  const foodResult = makananPokok.concat(makananLauk, makananSayur, makananBuah);
 
   return foodResult;
 };
