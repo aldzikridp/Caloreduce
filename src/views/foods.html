@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="public/css/style.css" rel="stylesheet">
+  </head>
+  <body class="bg-green-400">
+    <div id="menu" class="container mx-auto px-4 lg:pt-24 lg:pb-64">
+      <div class="flex flex-wrap text-center bg-white rounded shadow-2xl justify-center p-8 m-4">
+        <div class="w-full lg:w-6/12 px-4">
+          <h2 class="text-4xl font-semibold text-black">Saran Menu</h2>
+          <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
+            Kebutuhan kalori harian anda sebesar <span class="font-bold">{{BMR}}</span>
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col flex-wrap mt-12 justify-center">
+
+        {{&items}}
+ 
+      </div>
+    </div>
+  </body>
+</html>
