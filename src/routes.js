@@ -1,5 +1,6 @@
 const calculateCal = require('./handlers/calculateCal');
 const recommendFood = require('./handlers/recommendFood');
+const renderFoods = require('./handlers/renderFoods');
 
 const routes = [
   {
@@ -17,7 +18,7 @@ const routes = [
   {
     method: 'GET',
     path: '/calorie',
-    handler: (request) => {
+    handler: (request, h) => {
       const {
         height,
         weight,
@@ -32,7 +33,20 @@ const routes = [
         sex,
       });
 
-      return BMR;
+      const foods = recommendFood(BMR);
+      const items = renderFoods(foods);
+
+      return h.view('foods', { BMR, items });
+    },
+  },
+
+  {
+    method: 'GET',
+    path: '/test',
+    handler: {
+      view: {
+        template: 'foods',
+      },
     },
   },
   {
