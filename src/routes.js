@@ -17,7 +17,7 @@ const routes = [
   },
   {
     method: 'GET',
-    path: '/calorie',
+    path: '/foods',
     handler: (request, h) => {
       const {
         height,
@@ -37,25 +37,6 @@ const routes = [
       const items = renderFoods(foods);
 
       return h.view('foods', { BMR, items });
-    },
-  },
-
-  {
-    method: 'GET',
-    path: '/test',
-    handler: {
-      view: {
-        template: 'foods',
-      },
-    },
-  },
-  {
-    method: 'GET',
-    path: '/foods',
-    handler: (request) => {
-      const { calorie } = request.query;
-      const foods = recommendFood(calorie);
-      return foods;
     },
   },
   {
